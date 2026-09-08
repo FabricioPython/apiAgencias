@@ -1,4 +1,4 @@
-import agencia from "../models/Agencia.js";
+import agencia from "../../models/Agencia.js";
 
 
 class AgenciaController {

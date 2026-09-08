@@ -1,5 +1,5 @@
 import express from "express";
-import AgenciasController from "../controllers/agenciasController.js";
+import AgenciasController from "../src/controllers/agenciasController.js";
 
 const router = express.Router();
 router.get("/",AgenciasController.openAgencia);
