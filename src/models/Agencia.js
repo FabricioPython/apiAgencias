@@ -3,14 +3,14 @@ import mongoose from 'mongoose';
 
 const agenciaSchema = new mongoose.Schema({
     id: {type: mongoose.Schema.Types.ObjectId},
-    cgc: { type: String, required: true },
-    nome: { type: String, required: true },
-    endereco: { type: String},
-    municipio: { type: String},
-    cep: { type: String},
-    uf: { type: String},
-    telefone: { type: String},
-    atendente: { type: String}}
+    CGC: { type: String, required: true},
+    Nome: { type: String, required: true},
+    Logradouro: { type: String},
+    Municipio: { type: String},
+    CEP: { type: String},
+    UF: { type: String},
+    Telefone: { type: String},
+    Atendimento: { type: String}}, {versionKey: false}
 );
 
 

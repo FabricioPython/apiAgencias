@@ -1,8 +1,8 @@
 import express from "express";
-import connectToDatabases from "./config/dbConnect.js";
-import routes from "./routes/agenciasRoutes.js";
-s
-const db = connectToDatabases();
+import connectToDatabases from "./config/dbconect.js";
+import routes from "./routes/index.js";
+
+const db = await connectToDatabases();
 
 db.on("error", console.log.bind(console, "Erro de conexão"));
 
@@ -12,7 +12,6 @@ db.once("open", () => {
 
 
 const app = express();
-app.use(express.json());
 routes(app);
 
 

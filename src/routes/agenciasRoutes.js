@@ -1,13 +1,16 @@
 import express from "express";
-import AgenciasController from "../src/controllers/agenciasController.js";
+import AgenciaController from "../controllers/AgenciaController.js";
 
-const router = express.Router();
-router.get("/",AgenciasController.openAgencia);
+const routes = express.Router();
 
-router.get("/agencia/:id", AgenciasController.getAgenciaById);
+routes.get("/agencia/:CGC", AgenciaController.getAgenciaByCGC);
 
-router.get("/agencias", AgenciasController.getAgencias);
+routes.get("/agencia/:UF", AgenciaController.getAgencias);
 
-router.post("/agencias", AgenciasController.createAgencia);
+routes.post("/agencia", AgenciaController.createAgencia);
 
-export default router;
+routes.get("/info", AgenciaController.infoAgencia);
+
+routes.get("/municipio/:cidade", AgenciaController.getMunicipios);
+
+export default routes;

@@ -16,6 +16,5 @@
     "mongodb": "^7.6.0",
     "mongoose": "^9.9.5"
   },
-  "devDependencies": {},
   "keywords": []
 }
