@@ -5,7 +5,7 @@ const routes = express.Router();
 
 routes.get("/agencia/:CGC", AgenciaController.getAgenciaByCGC);
 
-routes.get("/agencia/:UF", AgenciaController.getAgencias);
+routes.get("/agencia/uf/:UF", AgenciaController.getAgencias);
 
 routes.post("/agencia", AgenciaController.createAgencia);
 
