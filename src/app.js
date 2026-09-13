@@ -12,6 +12,7 @@ db.once("open", () => {
 
 
 const app = express();
+app.use(express.static('public')); // Serve os arquivos HTML/JS locais
 routes(app);
 
 

@@ -7,13 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const routes = (app) => {
-  app.route("/").get((req, res) => {
-    res.status(200).sendFile(path.join(__dirname, "home.html"));
-  });
-
-  app.route("/home.js").get((req, res) => {
-    res.status(200).sendFile(path.join(__dirname, "home.js"));
-  });
+  // Vercel e express.static servirão a pasta public automaticamente
 
   app.use(
     express.json(),
