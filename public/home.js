@@ -2,7 +2,8 @@ document.getElementById('searchForm').addEventListener('submit', async function(
     e.preventDefault(); // Impede o recarregamento da página
     
     const filtro = document.getElementById('filtro').value;
-    const valor = document.getElementById('valor').value;
+    const valor = document.getElementById('valor').value.toLowerCase();
+    //console.log(`Buscando por ${filtro}: ${valor}`);
     
     const resultsContainer = document.getElementById('resultsContainer');
     const resultsGrid = document.getElementById('resultsGrid');
