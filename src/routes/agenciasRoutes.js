@@ -4,12 +4,12 @@ import AgenciaController from "../controllers/AgenciaController.js";
 const routes = express.Router();
 
 routes.get("/", (req, res) => {
-  res.redirect("/index.html");
+  res.status(301).redirect("/index.html");
 });
 
 routes.get("/agencia/:CGC", AgenciaController.getAgenciaByCGC);
 
-routes.get("/agencia/uf/:UF", AgenciaController.getAgencias);
+routes.get("/agencia/:UF", AgenciaController.getAgencias);
 
 routes.post("/agencia", AgenciaController.createAgencia);
 
