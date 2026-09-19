@@ -1,9 +1,9 @@
 document.getElementById('searchForm').addEventListener('submit', async function(e) {
     e.preventDefault(); // Impede o recarregamento da página
-    
-    const filtro = document.getElementById('filtro').value;
-    const valor = document.getElementById('valor').value.toLowerCase();
-    //console.log(`Buscando por ${filtro}: ${valor}`);
+     
+    let filtro = document.getElementById('filtro').value;
+    let valor = document.getElementById('valor').value.toLowerCase();
+
     
     const resultsContainer = document.getElementById('resultsContainer');
     const resultsGrid = document.getElementById('resultsGrid');
@@ -21,7 +21,7 @@ document.getElementById('searchForm').addEventListener('submit', async function(
         if (filtro === 'cgc') {
             url = `/agencia/${encodeURIComponent(valor)}`;
         } else if (filtro === 'uf') {
-            url = `/agencia/uf/${encodeURIComponent(valor).toUpperCase()}`;
+            url = `/agencias/${encodeURIComponent(valor.toUpperCase())}`;
         } else if (filtro === 'municipio') {
             url = `/municipio/${encodeURIComponent(valor)}`;
         }

@@ -9,7 +9,7 @@ routes.get("/", (req, res) => {
 
 routes.get("/agencia/:CGC", AgenciaController.getAgenciaByCGC);
 
-routes.get("/agencia/:UF", AgenciaController.getAgencias);
+routes.get("/agencias/:UF", AgenciaController.getAgencias);
 
 routes.post("/agencia", AgenciaController.createAgencia);
 
